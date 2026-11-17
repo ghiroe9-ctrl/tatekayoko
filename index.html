@@ -189,12 +189,16 @@ section{padding-block:56px}
 @media (max-width:720px){.works{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:440px){.works{grid-template-columns:1fr}}
 .work{display:flex;flex-direction:column;gap:12px;text-decoration:none;min-width:0}
-.work .phone{aspect-ratio:9/16;max-width:100%;border:2px solid var(--ink);border-radius:18px;background:var(--surface);padding:14px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .2s}
+.work .phone{max-width:100%;border:1.5px solid var(--line);border-radius:16px;background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 13%,var(--surface)) 0%,var(--surface) 62%);padding:16px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.work:hover .phone{border-color:var(--accent)}
+.work .phone::after{content:"";position:absolute;right:-28px;top:-28px;width:96px;height:96px;border-radius:50%;background:color-mix(in srgb,var(--accent) 12%,transparent);pointer-events:none}
+.cuts-row{display:flex;align-items:baseline;gap:8px}
+.cuts-lbl{font-size:13px;font-weight:700;color:var(--muted);line-height:1.4}
+.cuts-lbl small{display:block;font-size:11.5px;font-weight:500}
 .work:hover .phone{transform:translateY(-4px)}
 .work .ph-top{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;color:var(--muted)}
-.work .cuts-num{font-family:var(--f-display);font-size:clamp(52px,9vw,80px);line-height:1}
-.work .cuts-num small{font-family:var(--f-body);font-weight:700;font-size:16px;margin-left:4px}
-.work .bars{display:flex;gap:3px;height:14px}
+.work .cuts-num{font-family:var(--f-display);font-size:clamp(40px,6vw,56px);line-height:.95;color:var(--accent)}
+.work .bars{display:flex;gap:3px;height:10px}
 .work .bars span{flex:1;border-radius:3px;background:var(--accent)}
 .work .bars span.bts{background:var(--rec)}
 .work .legend{font-size:11px;color:var(--muted);display:flex;gap:12px}
@@ -216,7 +220,7 @@ section{padding-block:56px}
 .sub-note{font-size:13px;font-weight:500;color:var(--muted)}
 .works-sub{font-size:15px;font-weight:700;margin:0 0 14px;display:flex;align-items:center;gap:8px}
 .works-sub::before{content:"";width:18px;height:2px;background:var(--accent)}
-.work .genre{font-family:var(--f-display);font-size:clamp(26px,4.4vw,38px);line-height:1.15}
+.work .genre{font-family:var(--f-display);font-size:clamp(24px,3.6vw,32px);line-height:1.2;color:var(--accent)}
 /* about */
 .about{display:grid;gap:24px}
 .about-body{display:grid;gap:14px;max-width:38em;font-size:16px}
@@ -251,6 +255,42 @@ section{padding-block:56px}
 .auto .self{font-size:12.5px;color:color-mix(in srgb,var(--bg) 62%,transparent)}
 .autofoot{margin-top:22px;font-size:14px;color:color-mix(in srgb,var(--bg) 78%,transparent);max-width:46em}
 .autofoot a{color:var(--accent-pan);font-weight:700}
+.auto .price .amt{font-family:var(--f-mono);font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.auto .price small{font-size:12px;font-weight:500;color:color-mix(in srgb,var(--bg) 62%,transparent);margin-left:3px}
+.auto article.set{border-color:var(--accent-pan);background:color-mix(in srgb,var(--accent-pan) 16%,transparent)}
+.badge{align-self:flex-start;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;background:var(--accent-pan);color:var(--ink);padding:3px 9px;border-radius:999px}
+.plan{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:30px 0 0;padding:0}
+@media (max-width:900px){.plan{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.plan{grid-template-columns:1fr}}
+.plan li{list-style:none;border:1px solid color-mix(in srgb,var(--bg) 28%,transparent);border-radius:12px;padding:14px;min-width:0}
+.plan .when{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--accent-pan)}
+.plan h4{font-size:15px;margin:5px 0 4px}
+.plan p{font-size:13px;color:color-mix(in srgb,var(--bg) 72%,transparent)}
+.plan-lead{margin-top:34px;font-weight:700;display:flex;align-items:center;gap:8px}
+.plan-lead::before{content:"";width:18px;height:2px;background:var(--accent-pan)}
+
+/* website service */
+.webgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:start}
+@media (max-width:820px){.webgrid{grid-template-columns:1fr}}
+.webprice{background:var(--accent);color:var(--accent-ink);border-radius:var(--r);padding:24px;min-width:0}
+.webprice .amt{font-family:var(--f-mono);font-size:clamp(34px,6vw,46px);font-weight:700;line-height:1.1;display:block;margin-top:6px}
+.webprice .amt small{font-family:var(--f-body);font-size:15px;font-weight:700}
+.webprice .lead3{font-family:var(--f-display);font-size:20px}
+.webprice ul{margin:16px 0 0;padding-left:1.15em;display:grid;gap:5px;font-size:14px}
+.webprice .days{margin-top:16px;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--accent-ink) 35%,transparent);font-size:14px;font-weight:700}
+.webwhat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;min-width:0}
+.webwhat h3{font-size:17px}
+.webwhat ul{margin:12px 0 0;padding-left:1.15em;display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
+.cases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:16px}
+@media (max-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.cases{grid-template-columns:1fr}}
+.case{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;text-decoration:none;min-width:0}
+a.case:hover{border-color:var(--accent)}
+.case .kind{font-family:var(--f-mono);font-size:10px;letter-spacing:.11em;color:var(--accent)}
+.case h4{font-size:15.5px;margin:0}
+.case p{font-size:13px;color:var(--muted)}
+.case .go2{margin-top:auto;padding-top:8px;font-size:12.5px;font-weight:700;color:var(--accent)}
+.case .soon{margin-top:auto;padding-top:8px;font-size:12.5px;font-weight:700;color:var(--muted)}
 
 footer{padding-block:28px;font-size:12.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -265,7 +305,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="wrap">
     <a class="logo" href="#top" aria-label="たてかよこ（ひろふぉん）"><span class="mark" aria-hidden="true"><span class="tate">たて</span><span class="ka">か</span><span>よこ</span></span><span class="sub">by ひろふぉん</span></a>
     <nav class="nav" aria-label="ページ内">
-      <a href="#services">できること</a><a href="#works">作例</a><a href="#sns">SNS自動化</a><a href="#about">ひろふぉんについて</a><a href="#price">料金</a><a href="#flow">ご依頼の流れ</a><a href="#gear">おすすめ機材</a><a href="#faq">よくある質問</a>
+      <a href="#services">できること</a><a href="#works">作例</a><a href="#sns">SNS自動化</a><a href="#web">サイト作成</a><a href="#about">ひろふぉんについて</a><a href="#price">料金</a><a href="#flow">ご依頼の流れ</a><a href="#gear">おすすめ機材</a><a href="#faq">よくある質問</a>
     </nav>
     <a class="btn sm js-dm" href="https://www.instagram.com/" target="_blank" rel="noopener">DMで相談</a>
   </div>
@@ -367,30 +407,54 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <p class="works-sub">撮り方解説（海外旅行編）</p>
       <div class="works">
         <a class="work" href="https://www.instagram.com/p/Ddd7eZjoZoc/" target="_blank" rel="noopener">
-          <div class="phone"><div class="ph-top"><span>REEL 01</span><span>9:16</span></div><div class="cuts-num">6<small>カット</small></div><div><div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span class="bts"></span></div><div class="legend" style="margin-top:8px"><span><i></i>本編</span><span><i class="r"></i>裏側</span></div></div></div>
+          <div class="phone">
+            <div class="ph-top"><span>REEL 01</span><span>9:16</span></div>
+            <div class="cuts-row"><span class="cuts-num">6</span><span class="cuts-lbl">カット<small>＋撮影の裏側</small></span></div>
+            <div><div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span class="bts"></span></div><div class="legend" style="margin-top:7px"><span><i></i>本編</span><span><i class="r"></i>裏側</span></div></div>
+          </div>
           <div class="meta"><h3>6カット＋撮影の裏側</h3><p>いちばん見ごたえのある構成。</p><span class="go">Instagramで見る →</span></div>
         </a>
         <a class="work" href="https://www.instagram.com/p/DdIixeQx8UE/" target="_blank" rel="noopener">
-          <div class="phone"><div class="ph-top"><span>REEL 02</span><span>9:16</span></div><div class="cuts-num">4<small>カット</small></div><div><div class="bars"><span></span><span></span><span></span><span></span><span class="bts"></span></div><div class="legend" style="margin-top:8px"><span><i></i>本編</span><span><i class="r"></i>裏側</span></div></div></div>
+          <div class="phone">
+            <div class="ph-top"><span>REEL 02</span><span>9:16</span></div>
+            <div class="cuts-row"><span class="cuts-num">4</span><span class="cuts-lbl">カット<small>＋撮影の裏側</small></span></div>
+            <div><div class="bars"><span></span><span></span><span></span><span></span><span class="bts"></span></div><div class="legend" style="margin-top:7px"><span><i></i>本編</span><span><i class="r"></i>裏側</span></div></div>
+          </div>
           <div class="meta"><h3>4カット＋撮影の裏側</h3><p>ちょうどいいボリューム。</p><span class="go">Instagramで見る →</span></div>
         </a>
         <a class="work" href="https://www.instagram.com/p/Ddn_hTgTNb2/" target="_blank" rel="noopener">
-          <div class="phone"><div class="ph-top"><span>REEL 03</span><span>9:16</span></div><div class="cuts-num">2<small>カット</small></div><div><div class="bars"><span></span><span></span><span class="bts"></span></div><div class="legend" style="margin-top:8px"><span><i></i>本編</span><span><i class="r"></i>裏側</span></div></div></div>
+          <div class="phone">
+            <div class="ph-top"><span>REEL 03</span><span>9:16</span></div>
+            <div class="cuts-row"><span class="cuts-num">2</span><span class="cuts-lbl">カット<small>＋撮影の裏側</small></span></div>
+            <div><div class="bars"><span></span><span></span><span class="bts"></span></div><div class="legend" style="margin-top:7px"><span><i></i>本編</span><span><i class="r"></i>裏側</span></div></div>
+          </div>
           <div class="meta"><h3>2カット＋撮影の裏側</h3><p>はじめてなら、まずここから。</p><span class="go">Instagramで見る →</span></div>
         </a>
       </div>
       <p class="works-sub" style="margin-top:36px">映像・紹介系</p>
       <div class="works">
         <a class="work" href="https://www.instagram.com/p/DYkG5FmoOhb/" target="_blank" rel="noopener">
-          <div class="phone"><div class="ph-top"><span>REEL 04</span><span>9:16</span></div><div class="genre">景色</div><div class="ph-top"><span>SCENERY</span><span>●</span></div></div>
+          <div class="phone">
+            <div class="ph-top"><span>REEL 04</span><span>9:16</span></div>
+            <div class="genre">景色</div>
+            <div class="ph-top"><span>SCENERY</span><span>●</span></div>
+          </div>
           <div class="meta"><h3>景色の映像</h3><p>景色の美しさを、スマホで映像らしく。</p><span class="go">Instagramで見る →</span></div>
         </a>
         <a class="work" href="https://www.instagram.com/p/DO0sG7mEUX-/" target="_blank" rel="noopener">
-          <div class="phone"><div class="ph-top"><span>REEL 05</span><span>9:16</span></div><div class="genre">ひとり<br>撮影</div><div class="ph-top"><span>SELF SHOOT</span><span>●</span></div></div>
+          <div class="phone">
+            <div class="ph-top"><span>REEL 05</span><span>9:16</span></div>
+            <div class="genre">ひとり撮影</div>
+            <div class="ph-top"><span>SELF SHOOT</span><span>●</span></div>
+          </div>
           <div class="meta"><h3>旅先で、1人で撮影する方法</h3><p>撮ってくれる人がいなくても撮れる。</p><span class="go">Instagramで見る →</span></div>
         </a>
         <a class="work" href="https://www.instagram.com/p/DTUyRlPkRq9/" target="_blank" rel="noopener">
-          <div class="phone"><div class="ph-top"><span>REEL 06</span><span>9:16</span></div><div class="genre">施設<br>紹介</div><div class="ph-top"><span>MUSEUM</span><span>●</span></div></div>
+          <div class="phone">
+            <div class="ph-top"><span>REEL 06</span><span>9:16</span></div>
+            <div class="genre">施設紹介</div>
+            <div class="ph-top"><span>MUSEUM</span><span>●</span></div>
+          </div>
           <div class="meta"><h3>施設紹介（美術館）</h3><p>場所の魅力を伝える紹介リール。</p><span class="go">Instagramで見る →</span></div>
         </a>
       </div>
@@ -401,9 +465,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
   <section id="sns" class="autosec">
     <div class="wrap">
-      <div class="sec-head"><span class="tc">00:00:11</span><h2>AI × SNS運用の構築代行</h2><p>毎日の投稿に手が回らない方へ。AIを使って、投稿づくりから予約・投稿・返信までを自動で回る形に組み立てます。作って終わりではなく、動き続ける仕組みをお渡しします。</p></div>
+      <div class="sec-head"><span class="tc">00:00:11</span><h2>AI × SNS運用の構築代行</h2><p>毎日の投稿に手が回らない方へ。AIを使って、投稿づくりから予約・投稿・返信までが自動で回る形に組み立てます。作って終わりではなく、最後はご自身で運用できる状態までお渡しします。</p></div>
 
-      <div class="pipe" aria-label="自動化の流れ">
+      <div class="pipe" aria-label="自動化のしくみ">
         <span class="step"><b>STEP 1</b>素材・ネタを入れる</span><span class="arr">→</span>
         <span class="step"><b>STEP 2</b>AIが投稿文を下書き</span><span class="arr">→</span>
         <span class="step"><b>STEP 3</b>決めた時間に自動投稿</span><span class="arr">→</span>
@@ -420,7 +484,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>コメント返しの自動化（キーワードに反応してDMを送る形も）</li>
             <li>投稿文・ハッシュタグの下書き生成</li>
           </ul>
-          <div class="price">内容に合わせてお見積もり</div>
+          <div class="price"><span class="amt">¥100,000</span><small>税込・単発</small></div>
         </article>
         <article>
           <span class="plat">THREADS</span>
@@ -430,7 +494,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>投稿文のストック作成と使い回し</li>
             <li>反応の良かった型を次の投稿に反映</li>
           </ul>
-          <div class="price">内容に合わせてお見積もり</div>
+          <div class="price"><span class="amt">¥100,000</span><small>税込・単発</small></div>
           <p class="self">ひろふぉんのThreadsは1日8本で運用中です。</p>
         </article>
         <article>
@@ -441,7 +505,19 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>投稿文のストック管理</li>
             <li>1日の投稿スケジュール設計</li>
           </ul>
-          <div class="price">内容に合わせてお見積もり</div>
+          <div class="price"><span class="amt">¥100,000</span><small>税込・単発</small></div>
+        </article>
+        <article class="set">
+          <span class="badge">SET</span>
+          <span class="plat">INSTAGRAM + THREADS</span>
+          <h3>2つまとめて</h3>
+          <ul>
+            <li>InstagramとThreadsを同時に構築</li>
+            <li>同じ素材を2つのSNSで使い回す形に</li>
+            <li>単発で頼むより ¥50,000 お得</li>
+          </ul>
+          <div class="price"><span class="amt">¥150,000</span><small>税込</small></div>
+          <p class="self">他の組み合わせもご相談ください。</p>
         </article>
         <article>
           <span class="plat">NOTE</span>
@@ -454,29 +530,90 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <div class="price">内容に合わせてお見積もり</div>
         </article>
         <article>
-          <span class="plat">WEBSITE</span>
-          <h3>ホームページ作成</h3>
+          <span class="plat">SUPPORT</span>
+          <h3>納品後1ヶ月は無料サポート</h3>
           <ul>
-            <li>サービス紹介・プロフィールのページ制作</li>
-            <li>問い合わせ導線（DM・LINE・フォーム）の設置</li>
-            <li>公開までの設定と、公開後の更新</li>
+            <li>実際に回しながら設定を調整</li>
+            <li>操作の引き継ぎとレッスン</li>
+            <li>ご自身で運用できる状態にして引き渡し</li>
           </ul>
-          <div class="price">内容に合わせてお見積もり</div>
-          <p class="self">このサイトも同じ方法で制作・公開しています。</p>
-        </article>
-        <article>
-          <span class="plat">SET UP</span>
-          <h3>まとめて構築</h3>
-          <ul>
-            <li>複数アカウントをまとめて自動化</li>
-            <li>投稿の管理表づくり（1か所で全部見える形に）</li>
-            <li>仕組みの使い方レッスン付き</li>
-          </ul>
-          <div class="price">内容に合わせてお見積もり</div>
+          <div class="price">全プランに含まれます</div>
         </article>
       </div>
 
+      <p class="plan-lead">ご依頼から引き渡しまで</p>
+      <ol class="plan">
+        <li><span class="when">STEP 1</span><h4>ヒアリング</h4><p>今の運用と、いちばん手が止まっているところを伺い、何を自動化するか決めます。</p></li>
+        <li><span class="when">STEP 2 ／ 2週間</span><h4>構築・実装</h4><p>ヒアリングから2週間で組み立てます。</p></li>
+        <li><span class="when">STEP 3</span><h4>納品</h4><p>動く状態でお渡しします。</p></li>
+        <li><span class="when">STEP 4 ／ 1ヶ月・無料</span><h4>運用サポート</h4><p>実際に投稿を回しながら調整し、操作をお伝えします。</p></li>
+        <li><span class="when">STEP 5</span><h4>引き渡し</h4><p>ご自身で運用できる状態にして、お渡しして終了です。</p></li>
+      </ol>
+
       <p class="autofoot">ひろふぉん自身のInstagram・Threads・X・noteも、この仕組みで動かしています。自分で毎日回している形をそのままお渡しするので、机上の設計ではありません。どこから手をつければいいか分からない段階でも、<a class="js-dm" href="https://www.instagram.com/" target="_blank" rel="noopener">DMでご相談ください</a>。</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="web">
+    <div class="wrap">
+      <div class="sec-head"><span class="tc">00:00:13</span><h2>爆速公式サイト作成</h2><p>「ホームページを作りたいけれど、どこに頼めばいいか分からない」という方へ。ヒアリングが済めば、最短3日で公開まで進みます。</p></div>
+      <div class="webgrid">
+        <div class="webprice">
+          <span class="lead3">1案件</span>
+          <span class="amt">¥30,000<small>〜（税込）</small></span>
+          <ul>
+            <li>スマホでも読みやすいページ</li>
+            <li>サービス紹介・プロフィール・料金</li>
+            <li>問い合わせ導線（DM・LINE・フォーム）</li>
+            <li>公開までの設定</li>
+          </ul>
+          <p class="days">ヒアリング後、最短3日で納品</p>
+        </div>
+        <div class="webwhat">
+          <h3>こんな方に</h3>
+          <ul>
+            <li>SNSのプロフィールに貼るページが欲しい</li>
+            <li>サービスの内容と料金を、1ページにまとめたい</li>
+            <li>作ったあとも、文章や料金を気軽に直していきたい</li>
+            <li>制作会社に頼むほどではないけれど、ちゃんとしたページが要る</li>
+          </ul>
+          <h3 style="margin-top:18px">更新について</h3>
+          <ul>
+            <li>公開後の文言・料金の修正もご相談ください。</li>
+            <li>ご自身で更新できる形でのお渡しも可能です。</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="works-sub" style="margin-top:36px">これまでに作ったもの</p>
+      <div class="cases">
+        <a class="case" href="https://ghiroe9-ctrl.github.io/hirogohan-site/model/" target="_blank" rel="noopener">
+          <span class="kind">WEBSITE ／ MODEL</span>
+          <h4>HIRO.（メンズモデル）</h4>
+          <p>プロフィール・実績・仕事依頼の窓口をまとめたポートフォリオサイト。Instagramのプロフィールから繋いでいます。</p>
+          <span class="go2">サイトを見る →</span>
+        </a>
+        <a class="case" href="https://ghiroe9-ctrl.github.io/tatekayoko/" target="_blank" rel="noopener">
+          <span class="kind">WEBSITE ／ SERVICE</span>
+          <h4>たてかよこ（このサイト）</h4>
+          <p>いま見ているこのページです。サービス・料金・作例・問い合わせまでを1ページに収めています。</p>
+          <span class="go2">このページです →</span>
+        </a>
+        <a class="case" href="https://note.com/large_avocet5920" target="_blank" rel="noopener">
+          <span class="kind">NOTE ／ 運用代行</span>
+          <h4>ひろきちの育休日記</h4>
+          <p>1年間の育休の記録を連載しているnote。記事づくりから予約配信まで、続く形で運用しています。</p>
+          <span class="go2">noteを見る →</span>
+        </a>
+        <div class="case">
+          <span class="kind">WEBSITE ／ サービス立ち上げ</span>
+          <h4>不動産コンサル名鑑</h4>
+          <p>宅建士に15分から相談できるサービスのサイト。登録・予約の流れまで含めて制作しました。</p>
+          <span class="soon">2026年12月 公開予定</span>
+        </div>
+      </div>
     </div>
   </section>
 
