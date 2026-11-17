@@ -217,8 +217,13 @@ section{padding-block:56px}
 .grp-k.conv .ar{font-family:var(--f-mono);font-size:13px;opacity:.85}
 .svc article.clip{grid-column:span 2}
 @media (max-width:560px){.svc article.clip{grid-column:auto}}
-.clip .outs{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
-.clip .outs span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.outs{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.outs span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
+.svc article.photo{grid-column:span 2}
+@media (max-width:560px){.svc article.photo{grid-column:auto}}
+.rent{margin-top:4px;border-top:1px dashed var(--line);padding-top:12px}
+.rent b{font-size:14px;display:block;margin-bottom:7px}
+.lead-time{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--rec);border:1px solid var(--rec);border-radius:8px;padding:4px 10px;align-self:flex-start}
 .svc article.model{grid-column:span 2}
 @media (max-width:560px){.svc article.model{grid-column:auto}}
 .model-link{font-size:14px;font-weight:700;color:var(--accent);text-decoration:none}
@@ -341,7 +346,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <div class="eyebrow"><span class="dot" aria-hidden="true"></span>REC ― 撮影・編集・SNS運用</div>
         <h1 aria-label="たてかよこ"><span class="tate">たて</span><span class="ka">か</span><span class="yoko">よこ</span></h1>
         <p class="reading">たて＝縦動画（リール・TikTok）／よこ＝横動画（YouTube・記録）</p>
-        <p class="lead">リールの<b>縦動画</b>も、YouTubeやイベント記録の<b>横動画</b>も。スマホ1台で撮れる動画を、企画・撮影・CapCut編集まで手伝います。撮り方を覚えたい方には、撮影会やマンツーマンレッスンも。<br>YouTube動画を縦に切り出す<b>切り抜き代行</b>、出演者を手配する<b>キャスティング</b>、AIを使った<b>SNS運用の自動化・ホームページ作成</b>までお受けしています。</p>
+        <p class="lead">リールの<b>縦動画</b>も、YouTubeやイベント記録の<b>横動画</b>も。スマホ1台で撮れる動画を、企画・撮影・CapCut編集まで手伝います。撮り方を覚えたい方には、撮影会やマンツーマンレッスンも。<br>YouTube動画を縦に切り出す<b>切り抜き代行</b>、<b>プロフィール写真の撮影</b>、出演者を手配する<b>キャスティング</b>、AIを使った<b>SNS運用の自動化・ホームページ作成</b>までお受けしています。</p>
         <div class="ctas">
           <a class="btn js-dm" href="https://www.instagram.com/" target="_blank" rel="noopener">InstagramのDMで相談する</a>
           <a class="btn ghost" href="#price">料金を見る</a>
@@ -411,6 +416,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <p>長く撮ったYouTube動画から、伸びやすい場面を選んで縦のショート動画に作り替えます。1本の動画から何本も作れるので、撮り直さずに投稿を増やせます。テロップ・BGM・色味の調整込みでお渡しします。</p>
           <div class="outs"><span>YouTube Shorts</span><span>Instagramリール</span><span>TikTok</span></div>
           <div class="price">本数に応じてお見積もり<br><span class="sub-note">元動画のURLと、作りたい本数をお知らせください。</span></div>
+        </article>
+      </div>
+
+      <div class="grp" style="margin-top:32px"><span class="grp-k">写真</span><h3>プロフィール写真の撮影</h3></div>
+      <div class="svc">
+        <article class="photo">
+          <div class="k"><span>PHOTO</span><span>アイコン・サムネ</span></div>
+          <h3>プロフィール写真の撮影</h3>
+          <p>マッチングアプリやSNSアカウントのプロフィールに使う写真を撮ります。アイコンにも、サムネイルにも使えるカットを何パターンか押さえます。普段のスマホ自撮りでは出しにくい、自然な表情と光の当て方で撮ります。</p>
+          <span class="lead-time">3日前までにお問い合わせください</span>
+          <div class="rent">
+            <b>アパレルの貸し出しもできます（ハイブランドなど）</b>
+            <div class="outs"><span>ジュエリー</span><span>時計</span><span>Tシャツ</span><span>上着</span></div>
+          </div>
+          <div class="price"><span class="mono">1時間 ¥5,000〜</span>（税込）<br><span class="sub-note">撮影は1時間半ほどを見ています。</span></div>
         </article>
       </div>
 
@@ -772,6 +792,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <details><summary>編集代行の素材はどうやって送ればいいですか？</summary><p>ご依頼が決まったあと、DMで送り方をご案内します。</p></details>
         <details><summary>撮影会の日程はどこで分かりますか？</summary><p>Instagramの投稿とストーリーズでお知らせします。「こういう企画をやってほしい」というリクエストもDMで受け付けています。</p></details>
         <details><summary>1分を超える動画や、横動画もお願いできますか？</summary><p>できます。内容を伺ってお見積もりします。</p></details>
+        <details><summary>プロフィール写真は、何を着ていけばいいですか？</summary><p>普段の服で大丈夫です。ジュエリー・時計・Tシャツ・上着はこちらで貸し出せるものがあるので、使いたい雰囲気をDMでお知らせください。日程は3日前までにご相談ください。</p></details>
         <details><summary>YouTubeの切り抜きは、何本から頼めますか？</summary><p>1本からお受けします。元動画のURLと作りたい本数をDMでお知らせください。1本の長い動画から複数本作ることもできます。</p></details>
         <details><summary>SNSの自動化は、何から始めればいいですか？</summary><p>今の投稿のやり方と、どこがいちばん大変かを教えてください。手が止まっているところから順に自動化していきます。アカウントがまだ無い状態からでも大丈夫です。</p></details>
         <details><summary>自動化した仕組みは、自分で操作できますか？</summary><p>できます。お渡しするときに使い方のレッスンをつけています。更新や修正をこちらで続けることも可能です。</p></details>
@@ -792,7 +813,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="tmpl">
         <b>DMにそのまま使える文面</b>
         <pre id="tmpl">サイトを見て連絡しました。
-相談したい内容：（編集代行／切り抜き／講座／レッスン／撮影会／モデル／キャスティング／SNS自動化／ホームページ）
+相談したい内容：（編集代行／切り抜き／プロフィール撮影／講座／レッスン／撮影会／モデル／キャスティング／SNS自動化／ホームページ）
 動画の長さ・用途：
 希望の時期：</pre>
         <button type="button" id="copyBtn">文面をコピー</button>
