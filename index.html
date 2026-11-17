@@ -213,6 +213,12 @@ section{padding-block:56px}
 .grp{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .grp-k{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:18px;color:var(--accent-ink);background:var(--accent);padding:4px 12px;border-radius:8px}
 .grp h3{font-size:17px}
+.grp-k.conv{gap:6px;font-size:16px}
+.grp-k.conv .ar{font-family:var(--f-mono);font-size:13px;opacity:.85}
+.svc article.clip{grid-column:span 2}
+@media (max-width:560px){.svc article.clip{grid-column:auto}}
+.clip .outs{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.clip .outs span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg)}
 .svc article.model{grid-column:span 2}
 @media (max-width:560px){.svc article.model{grid-column:auto}}
 .model-link{font-size:14px;font-weight:700;color:var(--accent);text-decoration:none}
@@ -266,6 +272,20 @@ section{padding-block:56px}
 .plan .when{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--accent-pan)}
 .plan h4{font-size:15px;margin:5px 0 4px}
 .plan p{font-size:13px;color:color-mix(in srgb,var(--bg) 72%,transparent)}
+.ratecard{border:1px solid color-mix(in srgb,var(--bg) 26%,transparent);border-radius:14px;overflow:hidden;margin-top:30px}
+.rc-row{display:grid;grid-template-columns:1.5fr .9fr 1.1fr;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent);font-size:14.5px}
+.rc-row:last-child{border-bottom:0}
+.rc-head{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;color:var(--accent-pan);background:color-mix(in srgb,var(--bg) 7%,transparent)}
+.rc-row .amt2{font-family:var(--f-mono);font-weight:700;font-size:18px;font-variant-numeric:tabular-nums}
+.rc-row .when2{color:color-mix(in srgb,var(--bg) 74%,transparent);font-size:13.5px}
+.rc-row.disc{background:color-mix(in srgb,var(--accent-pan) 15%,transparent)}
+.rc-row.disc .amt2{font-size:15px}
+@media (max-width:620px){
+  .rc-head{display:none}
+  .rc-row{grid-template-columns:1fr;gap:3px;padding:14px 16px}
+  .rc-row span:first-child{font-weight:700}
+  .rc-row .when2::before{content:"納期：";font-weight:700}
+}
 .plan-lead{margin-top:34px;font-weight:700;display:flex;align-items:center;gap:8px}
 .plan-lead::before{content:"";width:18px;height:2px;background:var(--accent-pan)}
 
@@ -318,7 +338,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <div class="eyebrow"><span class="dot" aria-hidden="true"></span>REC ― 撮影・編集・SNS運用</div>
         <h1 aria-label="たてかよこ"><span class="tate">たて</span><span class="ka">か</span><span class="yoko">よこ</span></h1>
         <p class="reading">たて＝縦動画（リール・TikTok）／よこ＝横動画（YouTube・記録）</p>
-        <p class="lead">リールの<b>縦動画</b>も、YouTubeやイベント記録の<b>横動画</b>も。スマホ1台で撮れる動画を、企画・撮影・CapCut編集まで手伝います。撮り方を覚えたい方には、撮影会やマンツーマンレッスンも。<br>さらに、出演者を手配する<b>キャスティング</b>と、AIを使った<b>SNS運用の自動化・ホームページ作成</b>までお受けしています。</p>
+        <p class="lead">リールの<b>縦動画</b>も、YouTubeやイベント記録の<b>横動画</b>も。スマホ1台で撮れる動画を、企画・撮影・CapCut編集まで手伝います。撮り方を覚えたい方には、撮影会やマンツーマンレッスンも。<br>YouTube動画を縦に切り出す<b>切り抜き代行</b>、出演者を手配する<b>キャスティング</b>、AIを使った<b>SNS運用の自動化・ホームページ作成</b>までお受けしています。</p>
         <div class="ctas">
           <a class="btn js-dm" href="https://www.instagram.com/" target="_blank" rel="noopener">InstagramのDMで相談する</a>
           <a class="btn ghost" href="#price">料金を見る</a>
@@ -380,6 +400,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <div class="price">ご相談のうえお見積もり</div>
         </article>
       </div>
+      <div class="grp" style="margin-top:32px"><span class="grp-k conv"><span class="ratio h"></span><span class="ar">→</span><span class="ratio v"></span></span><h3>横の動画を、縦に切り抜く</h3></div>
+      <div class="svc">
+        <article class="clip">
+          <div class="k"><span>CLIP</span><span>YouTube → Shorts</span></div>
+          <h3>YouTube切り抜き代行</h3>
+          <p>長く撮ったYouTube動画から、伸びやすい場面を選んで縦のショート動画に作り替えます。1本の動画から何本も作れるので、撮り直さずに投稿を増やせます。テロップ・BGM・色味の調整込みでお渡しします。</p>
+          <div class="outs"><span>YouTube Shorts</span><span>Instagramリール</span><span>TikTok</span></div>
+          <div class="price">本数に応じてお見積もり<br><span class="sub-note">元動画のURLと、作りたい本数をお知らせください。</span></div>
+        </article>
+      </div>
+
       <div class="grp" style="margin-top:32px"><span class="grp-k">被写体</span><h3>モデル・キャスティング</h3></div>
       <div class="svc">
         <article class="model">
@@ -517,7 +548,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>単発で頼むより ¥50,000 お得</li>
           </ul>
           <div class="price"><span class="amt">¥150,000</span><small>税込</small></div>
-          <p class="self">他の組み合わせもご相談ください。</p>
+          <p class="self">他の組み合わせも、まとめてのご依頼はディスカウントします。</p>
         </article>
         <article>
           <span class="plat">NOTE</span>
@@ -527,7 +558,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>配信スケジュールの設計と予約投稿</li>
             <li>SNSからnoteへの導線づくり</li>
           </ul>
-          <div class="price">内容に合わせてお見積もり</div>
+          <div class="price"><span class="amt">¥100,000</span><small>税込</small></div>
         </article>
         <article>
           <span class="plat">SUPPORT</span>
@@ -539,6 +570,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           </ul>
           <div class="price">全プランに含まれます</div>
         </article>
+      </div>
+
+      <div class="ratecard">
+        <div class="rc-row rc-head"><span>サービス</span><span>料金（税込）</span><span>納期の目安</span></div>
+        <div class="rc-row"><span>Instagramの自動化</span><span class="amt2">¥100,000</span><span class="when2">ヒアリング後 2週間</span></div>
+        <div class="rc-row"><span>Threadsの自動化</span><span class="amt2">¥100,000</span><span class="when2">ヒアリング後 2週間</span></div>
+        <div class="rc-row"><span>Xの自動化</span><span class="amt2">¥100,000</span><span class="when2">ヒアリング後 2週間</span></div>
+        <div class="rc-row"><span>noteの運用代行</span><span class="amt2">¥100,000</span><span class="when2">ご相談のうえ</span></div>
+        <div class="rc-row"><span>ホームページ制作</span><span class="amt2">¥30,000〜</span><span class="when2">ヒアリング後 最短3日</span></div>
+        <div class="rc-row disc"><span>まとめて構築</span><span class="amt2">ディスカウント</span><span class="when2">組み合わせに応じて要相談</span></div>
       </div>
 
       <p class="plan-lead">ご依頼から引き渡しまで</p>
@@ -706,6 +747,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <details><summary>編集代行の素材はどうやって送ればいいですか？</summary><p>ご依頼が決まったあと、DMで送り方をご案内します。</p></details>
         <details><summary>撮影会の日程はどこで分かりますか？</summary><p>Instagramの投稿とストーリーズでお知らせします。「こういう企画をやってほしい」というリクエストもDMで受け付けています。</p></details>
         <details><summary>1分を超える動画や、横動画もお願いできますか？</summary><p>できます。内容を伺ってお見積もりします。</p></details>
+        <details><summary>YouTubeの切り抜きは、何本から頼めますか？</summary><p>1本からお受けします。元動画のURLと作りたい本数をDMでお知らせください。1本の長い動画から複数本作ることもできます。</p></details>
         <details><summary>SNSの自動化は、何から始めればいいですか？</summary><p>今の投稿のやり方と、どこがいちばん大変かを教えてください。手が止まっているところから順に自動化していきます。アカウントがまだ無い状態からでも大丈夫です。</p></details>
         <details><summary>自動化した仕組みは、自分で操作できますか？</summary><p>できます。お渡しするときに使い方のレッスンをつけています。更新や修正をこちらで続けることも可能です。</p></details>
         <details><summary>ホームページはどれくらいで作れますか？</summary><p>載せる内容が決まっていれば数日で公開まで進められます。内容を一緒に考えるところからでもお受けします。</p></details>
@@ -725,7 +767,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="tmpl">
         <b>DMにそのまま使える文面</b>
         <pre id="tmpl">サイトを見て連絡しました。
-相談したい内容：（編集代行／講座／レッスン／撮影会／モデル／キャスティング／SNS自動化／ホームページ）
+相談したい内容：（編集代行／切り抜き／講座／レッスン／撮影会／モデル／キャスティング／SNS自動化／ホームページ）
 動画の長さ・用途：
 希望の時期：</pre>
         <button type="button" id="copyBtn">文面をコピー</button>
